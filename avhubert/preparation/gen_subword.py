@@ -44,6 +44,8 @@ def gen_vocab(
         f"--bos_id={BOS_TOKEN_ID}",
         f"--eos_id={EOS_TOKEN_ID}",
         f"--pad_id={PAD_TOKEN_ID}",
+        '--num_threads=8'
+        
     ]
     if special_symbols is not None:
         _special_symbols = ",".join(special_symbols)

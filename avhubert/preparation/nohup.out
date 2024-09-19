@@ -1,0 +1,38 @@
+Trim original videos in pretrain
+Step 2. Trim video and audio
+Total videos in current shard: 1235/118516
+  0%|          | 0/1235 [00:00<?, ?it/s]  0%|          | 1/1235 [00:00<14:04,  1.46it/s]  0%|          | 2/1235 [00:06<1:15:19,  3.67s/it]  0%|          | 3/1235 [00:08<1:00:57,  2.97s/it]  0%|          | 4/1235 [00:13<1:19:44,  3.89s/it]  0%|          | 4/1235 [00:16<1:24:42,  4.13s/it]
+Traceback (most recent call last):
+  File "lrs3_prepare.py", line 235, in <module>
+    trim_pretrain(args.lrs3, args.ffmpeg, args.rank, args.nshard, step=args.step)
+  File "lrs3_prepare.py", line 179, in trim_pretrain
+    trim_video_frame(csv_fn, pretrain_dir, output_video_dir, ffmpeg, rank, nshard)
+  File "lrs3_prepare.py", line 127, in trim_video_frame
+    pipe = subprocess.call(cmd, stdout = subprocess.PIPE, stderr = subprocess.STDOUT) # subprocess.PIPE
+  File "/home/agent_h/miniconda3/envs/avhubert/lib/python3.8/subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/home/agent_h/miniconda3/envs/avhubert/lib/python3.8/subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/agent_h/miniconda3/envs/avhubert/lib/python3.8/subprocess.py", line 1676, in _execute_child
+    part = os.read(errpipe_read, 50000)
+KeyboardInterrupt
+Trim original videos in pretrain
+Step 2. Trim video and audio
+Total videos in current shard: 1235/118516
+  0%|          | 0/1235 [00:00<?, ?it/s]  0%|          | 1/1235 [00:00<14:33,  1.41it/s]  0%|          | 2/1235 [00:06<1:17:10,  3.76s/it]  0%|          | 3/1235 [00:08<1:02:20,  3.04s/it]  0%|          | 4/1235 [00:14<1:21:24,  3.97s/it]  0%|          | 5/1235 [00:17<1:19:03,  3.86s/it]  0%|          | 6/1235 [00:23<1:28:15,  4.31s/it]  1%|          | 7/1235 [00:24<1:07:32,  3.30s/it]  1%|          | 8/1235 [00:26<1:01:07,  2.99s/it]  1%|          | 9/1235 [00:31<1:13:47,  3.61s/it]  1%|          | 10/1235 [00:33<1:04:09,  3.14s/it]  1%|          | 11/1235 [00:34<52:23,  2.57s/it]    1%|          | 12/1235 [00:36<45:44,  2.24s/it]  1%|          | 13/1235 [00:41<1:04:14,  3.15s/it]  1%|          | 14/1235 [00:44<1:02:52,  3.09s/it]  1%|          | 14/1235 [00:44<1:05:03,  3.20s/it]
+Traceback (most recent call last):
+  File "lrs3_prepare.py", line 235, in <module>
+    trim_pretrain(args.lrs3, args.ffmpeg, args.rank, args.nshard, step=args.step)
+  File "lrs3_prepare.py", line 179, in trim_pretrain
+    trim_video_frame(csv_fn, pretrain_dir, output_video_dir, ffmpeg, rank, nshard)
+  File "lrs3_prepare.py", line 111, in trim_video_frame
+    subprocess.call(cmd, shell=True)
+  File "/home/agent_h/miniconda3/envs/avhubert/lib/python3.8/subprocess.py", line 342, in call
+    return p.wait(timeout=timeout)
+  File "/home/agent_h/miniconda3/envs/avhubert/lib/python3.8/subprocess.py", line 1083, in wait
+    return self._wait(timeout=timeout)
+  File "/home/agent_h/miniconda3/envs/avhubert/lib/python3.8/subprocess.py", line 1822, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/home/agent_h/miniconda3/envs/avhubert/lib/python3.8/subprocess.py", line 1780, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt

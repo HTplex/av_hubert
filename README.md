@@ -52,7 +52,8 @@ Run our lip-reading demo using Colab: [![Open In Colab](https://colab.research.g
 ## Installation
 First, create a conda virtual environment and activate it:
 ```
-conda create -n avhubert python=3.8 -y
+conda create -n avhubert python=3.8 pip=24.0 -y
+
 conda activate avhubert
 ```
 Then, clone this directory:

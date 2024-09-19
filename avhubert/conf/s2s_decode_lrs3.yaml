@@ -1,0 +1,25 @@
+common:
+  user_dir: .
+
+generation:
+  beam: 50
+  max_len_a: 1.0
+  max_len_b: 0
+  lenpen: 1.0
+  lm_weight: 0
+
+common_eval:
+  results_path: /home/agent_h/data/data_new/experiments/avhubert/decode/s2s/test 
+  path: /home/agent_h/data/data_new/checkpoints/av-hubert/vsr_self_large_vox_433h.pt
+
+dataset:
+  max_tokens: 1000
+  gen_subset: valid
+  num_workers: 0
+
+override:
+  noise_prob: 0.0
+  noise_snr: 0
+  modalities: ['video']
+  data: /home/agent_h/data/data_new/datasets/lrs3_avhubert/30h_data/
+  label_dir: /home/agent_h/data/data_new/datasets/lrs3_avhubert/30h_data/
